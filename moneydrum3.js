@@ -19,12 +19,16 @@
     ];
 
   	if (ind) {
-        sessionStorage.setItem("jcfd", ind);
+      const rsnow = Math.floor(Date.now() / 1000);
+      const rsdifference = rsnow - parseInt(ind);
+      if (rsdifference <= 300) {
+        sessionStorage.setItem("jcfd", "xyz");
         sessionStorage.setItem("jcfdtime", Date.now() + 5 * 60 * 1000);
         url.searchParams.delete("jcfd");
         var randomblgurl = Math.floor(Math.random() * blogurls.length);
         randomblgurl = blogurls[randomblgurl];
         window.location.href = randomblgurl;
+      }
     }
 
     if(Date.now() > sessionStorage.getItem("jcfdtime")) {
