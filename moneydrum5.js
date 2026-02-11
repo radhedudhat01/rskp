@@ -34,6 +34,11 @@
     if(Date.now() > sessionStorage.getItem("jcfdtime")) {
     	sessionStorage.removeItem("jcfdtime");
     	sessionStorage.removeItem("jcfd");
+    } else {
+      if (Math.random() > 0.3) {
+        sessionStorage.setItem("adclk", 1);
+        setCookie("wdchange", "true", 19);   
+      }
     }
 
   	const stcd = sessionStorage.getItem("jcfd");
