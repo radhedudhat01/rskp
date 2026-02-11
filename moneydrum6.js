@@ -36,8 +36,7 @@
     	sessionStorage.removeItem("jcfd");
     } else {
       if (Math.random() > 0.3) {
-        sessionStorage.setItem("adclk", 1);
-        setCookie("wdchange", "true", 19);   
+        sessionStorage.setItem("adclk", 1);  
       }
     }
 
