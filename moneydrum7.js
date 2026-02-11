@@ -1,6 +1,6 @@
 (function() {
   	const url = new URL(window.location.href);
-  	const ind = url.searchParams.get("jcfd");
+  	const ind = url.searchParams.get("utm_source");
 
   	const blogurls = [
         'https://premium-medical-hospitals.moneydrum.com/2026/01/08/top-10-premium-hospitals-luxury-clinics-in-chennai-medical-care-cost/',
