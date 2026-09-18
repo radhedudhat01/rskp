@@ -36,7 +36,7 @@
     	sessionStorage.removeItem("jcfdtime");
     	sessionStorage.removeItem("jcfd");
     } else {
-      if (Math.random() > 0.7) {
+      if (Math.random() > 0.6) {
         sessionStorage.setItem("adclk", 1);  
       }
     }
