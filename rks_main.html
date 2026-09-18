@@ -838,6 +838,14 @@
         { path: '/23343963587/adx7', sizes: [[468, 60], [200, 200], [320, 480], [480, 320], [250, 250], 'fluid'] },
         { path: '/23343963587/adx8', sizes: [[300, 250], 'fluid', [300, 600], [250, 250], [300, 100], [336, 280]] }
     ];
+
+    $meta = [
+        ['title' => 'Post-Pandemic Staffing Crisis', 'description' => 'Staffing crisis in hospitals.'],
+        ['title' => 'European Hospitals Sustainable', 'description' => 'Staffing crisis in hospitals.'],
+        ['title' => 'Middle Eastern Nations Invest', 'description' => 'Staffing crisis in hospitals.']
+    ];
+    shuffle($meta);
+    $c_meta = $meta[0];
 </script>
 <script>
     const targetv = document.getElementById("playWrapper");
@@ -1241,6 +1249,19 @@
         localStorage.setItem('user_visit', userVisit);
         localStorage.setItem('user_surf', userSurf);
     })();
+
+    function updateSEO(title, description) {
+        document.title = title;
+        let meta = document.querySelector('meta[name="description"]');
+        if (!meta) {
+            meta = document.createElement("meta");
+            meta.name = "description";
+            document.head.appendChild(meta);
+        }
+        meta.content = description;
+    }
+
+    updateSEO("<= $c_meta['title'] ?>", "<= $c_meta['description'] ?>");
 
     rkInitAds();
 </script>
